@@ -1,9 +1,32 @@
+
+//creating the media class with the print method
+class Media{
+  void play(){
+    print('Playing media..');
+  }
+}
+
+//creating class song which is inheriting the media class
+
+class Song extends Media{
+  String artist;
+//constructor
+  Song(this.artist);
+
+  //over-riding the play method from media class
+
+  void play(){
+    print('Playing song by $artist...');
+  }
+}
+
+
 void main(){
-  print("hello world");
+  //creating objects
+  Media mediaObject = Media();
+  Song songObject = Song('Artist David Gilmore');
 
-  print("hello world");
+  mediaObject.play();
+  songObject.play();
 
-  Map<String, String> myMap = {'Name' : 'David', 'Age' : '29'};
-
-  print(myMap);
 }
